@@ -7,9 +7,9 @@
 /* Color Palette */
 :root {
     --pink: #F8C9DA;
-    --pink-dark: #E99AB9;
+    --pink-dark: #D982A5;
     --blue: #C9DDF8;
-    --blue-dark: #8DB5E8;
+    --blue-dark: #729BCF;
     --cream: #FFF9F7;
     --navy: #303653;
     --white: #FFFFFF;
@@ -27,7 +27,7 @@ body {
     background-color: var(--cream);
     color: var(--navy);
     font-family: Arial, sans-serif;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 /* Navigation Bar */
@@ -40,7 +40,7 @@ header {
 }
 
 .navbar {
-    max-width: 1100px;
+    max-width: 1150px;
     margin: auto;
     padding: 18px 25px;
     display: flex;
@@ -75,26 +75,31 @@ header {
 /* Home Section */
 .hero {
     text-align: center;
-    padding: 110px 25px;
+    padding: 130px 25px;
     background: linear-gradient(
         135deg,
         #FCE5ED,
         #E8F2FF,
         #FFF9F7
     );
+    position: relative;
 }
 
 .welcome {
+    display: inline-block;
     color: var(--pink-dark);
-    font-size: 13px;
-    letter-spacing: 3px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 7px 18px;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+    font-size: 52px;
+    margin-bottom: 12px;
 }
 
 .hero h1 span {
@@ -102,7 +107,8 @@ header {
 }
 
 .hero h2 {
-    font-size: 20px;
+    color: var(--blue-dark);
+    font-size: 21px;
     font-weight: normal;
     margin-bottom: 20px;
 }
@@ -117,7 +123,7 @@ header {
     display: inline-block;
     background-color: var(--pink);
     color: var(--navy);
-    padding: 12px 25px;
+    padding: 13px 28px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
@@ -131,14 +137,14 @@ header {
 
 /* General Sections */
 .section {
-    max-width: 1100px;
+    max-width: 1150px;
     margin: auto;
-    padding: 75px 25px;
+    padding: 85px 25px;
 }
 
 .section h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
+    font-size: 32px;
+    margin-bottom: 22px;
 }
 
 .section h2 span {
@@ -153,25 +159,27 @@ header {
 .project-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-    margin-top: 25px;
+    gap: 25px;
+    margin-top: 30px;
 }
 
 .project-card {
     background-color: var(--white);
-    padding: 25px;
-    border-radius: 18px;
+    padding: 30px;
+    border-radius: 20px;
     border: 1px solid #F5DCE6;
-    box-shadow: 0 5px 15px rgba(48, 54, 83, 0.05);
-    transition: transform 0.3s;
+    box-shadow: 0 8px 20px rgba(48, 54, 83, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(48, 54, 83, 0.10);
 }
 
 .project-card h3 {
     color: var(--pink-dark);
+    font-size: 20px;
     margin-bottom: 12px;
 }
 
@@ -198,17 +206,23 @@ header {
 
 .skills-container span {
     background-color: var(--blue);
-    padding: 10px 20px;
+    padding: 11px 22px;
     border-radius: 25px;
     font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.skills-container span:hover {
+    background-color: var(--pink);
 }
 
 /* Experience */
 .experience-card {
     background-color: var(--white);
-    padding: 25px;
+    padding: 30px;
     border-left: 5px solid var(--pink);
-    border-radius: 12px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(48, 54, 83, 0.05);
 }
 
 .experience-card h3 {
@@ -224,7 +238,7 @@ header {
 /* Footer */
 footer {
     text-align: center;
-    padding: 25px;
+    padding: 28px;
     background-color: var(--blue);
     color: var(--navy);
     font-size: 14px;
@@ -244,8 +258,16 @@ footer {
         gap: 12px;
     }
 
+    .hero {
+        padding: 85px 20px;
+    }
+
     .hero h1 {
-        font-size: 34px;
+        font-size: 36px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
     }
 
     .project-container {
@@ -253,6 +275,6 @@ footer {
     }
 
     .section {
-        padding: 50px 20px;
+        padding: 55px 20px;
     }
 }
