@@ -276,5 +276,9 @@ footer {
 
     .section {
         padding: 55px 20px;
+
+       body {
+    background-color: pink;
+}
     }
 }
